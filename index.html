@@ -8,14 +8,21 @@
     <script>
         function day(){
             document.getElementById("day").src="day.png";
+            document.querySelector(".btn").className="day-btn btn";
+            document.querySelector("body").className="screen-background";
         }
         function night(){
             document.getElementById("day").src="night.png";
+            document.querySelector(".btn1").className="night-btn btn";
+            document.querySelector("body").className="body";
         }
     </script>
     <style>
         body{
             background-color: rgb(216, 215, 215);
+        }
+        .screen-background{
+              background-color:rgb(224, 230, 173);
         }
         .container{
             width: 220px;
@@ -41,6 +48,13 @@
            cursor: pointer;
            border: 0.5px;
         }
+        .btn1{
+            border-radius: 15px;
+           font-size: 18px;
+           padding: 5px;
+           cursor: pointer;
+           border: 0.5px;
+        }
         .container-btn{
             display: flex;
             justify-content: space-between;
@@ -60,8 +74,8 @@
     <div class="container">
         <img src="day.png" class="day-img" id="day">
         <div class="container-btn">
-            <button class="day-btn btn"  onclick="day()"> Day</button>
-            <button class="night-btn btn" onclick="night()">Night</button>
+            <button class=" btn"  onclick="day()"> Day</button>
+            <button class=" btn1" onclick="night()">Night</button>
         </div>
     </div>
 </body>
